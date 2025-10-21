@@ -10,7 +10,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="uk">
-      <body>{children}</body>
+      <body className={`${inter.variable}`}>
+        <TanStackProvider>
+          <Header />
+
+          <main>{children}</main>
+        </TanStackProvider>
+      </body>
     </html>
   );
 }
