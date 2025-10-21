@@ -1,33 +1,35 @@
 @font-face {
-    font-family: 'Inter';
-    src: url('/fonts/Inter18pt-Medium.woff2') format('woff2'),
-        url('/fonts/Inter18pt-Medium.woff') format('woff'),
-        url('/fonts/Inter18pt-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Inter';
+  src:
+    url('/fonts/Inter18pt-Medium.woff2') format('woff2'),
+    url('/fonts/Inter18pt-Medium.woff') format('woff'),
+    url('/fonts/Inter18pt-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Inter';
-    src: url('/fonts/Inter18pt-Regular.woff2') format('woff2'),
-        url('/fonts/Inter18pt-Regular.woff') format('woff'),
-        url('/fonts/Inter18pt-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Inter';
+  src:
+    url('/fonts/Inter18pt-Regular.woff2') format('woff2'),
+    url('/fonts/Inter18pt-Regular.woff') format('woff'),
+    url('/fonts/Inter18pt-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Inter';
-    src: url('/fonts/Inter18pt-SemiBold.woff2') format('woff2'),
-        url('/fonts/Inter18pt-SemiBold.woff') format('woff'),
-        url('/fonts/Inter18pt-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Inter';
+  src:
+    url('/fonts/Inter18pt-SemiBold.woff2') format('woff2'),
+    url('/fonts/Inter18pt-SemiBold.woff') format('woff'),
+    url('/fonts/Inter18pt-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
-
 
 :root {
   --font-main: 'Inter', Arial, Helvetica, sans-serif;
@@ -42,11 +44,20 @@ body {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-main);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  list-style: none;
 }
 
 * {
@@ -59,4 +70,8 @@ a {
   text-decoration: none;
 }
 
-
+button {
+  font-family: var(--font-main);
+  cursor: pointer;
+  border: none;
+}
