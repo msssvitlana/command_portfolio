@@ -156,8 +156,8 @@
   }
 }
 
-@media screen and (min-resolution: 192dpi) {
+/* @media screen and (min-resolution: 192dpi) {
   .main {
     background-image: url('/images/homePage/back3@2x.webp');
   }
-}
+} */
