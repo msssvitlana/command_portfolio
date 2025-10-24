@@ -10,14 +10,13 @@
   background-size: cover;
   background-color: #0d1b2a;
   width: 100%;
-  min-height: 100vh;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.container {
-  width: 90%;
+  max-width: 375px;
   margin: 0 auto;
+
+  min-height: 100vh;
+  padding: 24px 16px;
+
+  text-align: center;
 }
 
 .title {
@@ -100,12 +99,9 @@
     justify-content: center;
     text-align: left;
     padding: 60px 40px;
+    /* padding: 24px 32px; */
+    max-width: 1024px;
     min-height: 100vh;
-  }
-
-  .container {
-    max-width: 1280px;
-    margin: 0 auto;
   }
 
   .title {
@@ -155,7 +151,12 @@
     font-size: 18px;
   }
 }
-
+@media screen and (min-width: 1280px) {
+  .main {
+    padding: 60px 60px;
+    max-width: 100%;
+  }
+}
 /* @media screen and (min-resolution: 192dpi) {
   .main {
     background-image: url('/images/homePage/back3@2x.webp');
