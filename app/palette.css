@@ -1,0 +1,33 @@
+:root {
+  /* Акценти */
+  --accent-color: #3b82f6;
+  --accent-color-light: #60a5fa;
+  --accent-color-glow: rgba(59, 130, 246, 0.35);
+
+  /* Текст */
+  --foreground-muted: #cbd5e1;
+  --text-secondary: #94a3b8;
+
+  /* Фон і карти */
+  --team-card-bg: rgba(17, 25, 40, 0.2);
+  --team-card-border: rgba(59, 130, 246, 0.25);
+  --team-card-hover: rgba(30, 58, 138, 0.8);
+
+  /* Градієнти */
+  --bg-gradient-light: linear-gradient(135deg, #0f172a, #1e293b);
+  --bg-gradient-dark: linear-gradient(135deg, #0a0f1c, #111827);
+
+  /* Тіні */
+  --shadow-default: 0 8px 16px rgba(0, 0, 0, 0.6), 0 0 30px rgba(59, 130, 246, 0.15);
+  --shadow-glow: 0 12px 24px rgba(0, 0, 0, 0.7), 0 0 40px rgba(59, 130, 246, 0.35);
+  --shadow-light:
+    0 8px 16px rgba(0, 0, 0, 0.5), 0 20px 40px rgba(0, 0, 0, 0.35),
+    inset 0 -5px 15px rgba(255, 255, 255, 0.05);
+  --shadow-elevated: 0 0 40px rgba(59, 130, 246, 0.35), 0 12px 32px rgba(0, 0, 0, 0.4);
+
+  /* Кнопка */
+  --btn-bg-dark: rgba(17, 25, 40, 0.4);
+  --btn-accent-light: rgba(59, 130, 246, 0.4);
+  --btn-accent-bg-hover: rgba(59, 130, 246, 0.2);
+  --btn-accent-bg-active: rgba(59, 130, 246, 0.3);
+}

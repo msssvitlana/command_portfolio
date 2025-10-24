@@ -1,15 +1,66 @@
 .section {
   padding: 24px 16px;
+  width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
+  background-image: url('/images/about/about-bg.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media screen and (min-width: 768px) {
   .section {
     padding: 24px 32px;
+    max-width: 1024px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .section {
-    padding: 32px 40px;
+    padding: 40px 60px;
+    max-width: 1600px;
   }
+}
+
+.contactBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  width: fit-content;
+  min-width: 220px;
+  padding: 14px 32px;
+  margin: 0 auto;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+
+  color: var(--foreground);
+  border-radius: 200px;
+  border: 1px solid var(--btn-accent-light);
+  background-color: var(--btn-bg-dark);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  box-shadow: var(--shadow-light);
+  transition: all 0.3s ease;
+}
+
+.contactBtn:hover,
+.contactBtn:focus {
+  background-color: var(--btn-accent-bg-hover);
+  border-color: var(--accent-color);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-2px);
+}
+
+.contactBtn:active {
+  transform: translateY(-1px);
+  background-color: var(--btn-accent-bg-active);
+  box-shadow: var(--shadow-default);
 }
