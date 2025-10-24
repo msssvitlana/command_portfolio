@@ -31,10 +31,26 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Inter';
+  src:
+    url('/fonts/Inter18pt-Bold.woff2') format('woff2'),
+    url('/fonts/Inter18pt-Bold.woff') format('woff'),
+    url('/fonts/Inter18pt-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --font-main: 'Inter', Arial, Helvetica, sans-serif;
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1f2937;
+  --foreground-muted: #4b5563;
+  --accent-color: #3b82f6;
+  --text-secondary: #374151;
+  --bg-gradient-light: linear-gradient(135deg, #f9fafc, #e0e7ff);
+  --team-card-bg: linear-gradient(135deg, #f0f4ff, #d9e4ff);
 }
 
 html,
@@ -49,6 +65,9 @@ body {
   font-family: var(--font-main);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 ul,
