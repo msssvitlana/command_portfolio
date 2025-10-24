@@ -14,7 +14,7 @@ const Home = () => {
           </p>
         </div>
 
-        <Link href="/info" className={css.homeBtn}>
+        <Link href="/about" className={css.homeBtn}>
           Відкрий можливості
         </Link>
       </div>

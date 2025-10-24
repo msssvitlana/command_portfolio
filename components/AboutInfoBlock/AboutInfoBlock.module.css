@@ -1,0 +1,37 @@
+.aboutTeam {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 40px 24px;
+  background: var(--bg-gradient-light);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+}
+
+.aboutTeamIntro {
+  text-align: center;
+}
+
+.aboutTeamTitle {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.aboutTeamSubtitle {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.aboutTeamDescription {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.aboutTeamDescription strong {
+  color: var(--accent-color);
+}
