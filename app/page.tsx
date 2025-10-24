@@ -3,23 +3,22 @@ import Link from 'next/link';
 
 const Home = () => {
   return (
-    <div className={css.page}>
-      <main className={css.main}>
-        <div className={css.container}>
-          <div className={css.textWrapper}>
-            <h1 className={css.title}>Need a website or app?</h1>
-            <p className={css.description}>
-              We design and build user-friendly, high-performance digital products — just the way
-              you imagine them.
-            </p>
-          </div>
-
-          <Link href="/campers" className={css.homeBtn}>
-            View Now
-          </Link>
+    <section className={css.main}>
+      <div className={css.container}>
+        <div className={css.textWrapper}>
+          <h1 className={css.title}>Уявляєш свій ідеальний сайт?</h1>
+          <p className={css.description}>
+            <span>Цифрові рішення, що працюють.</span>
+            <span>Дизайн, який закохує.</span>
+            <span>Сайти та застосунки під ключ — швидко, стильно та без зайвого клопоту.</span>
+          </p>
         </div>
-      </main>
-    </div>
+
+        <Link href="/info" className={css.homeBtn}>
+          Відкрий можливості
+        </Link>
+      </div>
+    </section>
   );
 };
 
