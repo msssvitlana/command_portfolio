@@ -3,6 +3,7 @@ import './globals.css';
 import 'modern-normalize';
 import TanStackProvider from '@/components/TanStackProvider/TanStackProvider';
 import Header from '../components/Header/Header';
+import './palette.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://your-domain.com'),

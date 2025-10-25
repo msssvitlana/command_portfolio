@@ -3,9 +3,9 @@
   flex-direction: column;
   gap: 24px;
   padding: 40px 24px;
-  background: var(--bg-gradient-light);
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+  border-radius: 16px;
+  box-shadow: var(--shadow-elevated);
+  backdrop-filter: blur(10px);
 }
 
 .aboutTeamIntro {
@@ -16,6 +16,7 @@
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 12px;
+  color: var(--accent-color-light);
 }
 
 .aboutTeamSubtitle {
