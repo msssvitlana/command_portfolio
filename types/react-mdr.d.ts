@@ -6,9 +6,6 @@ declare module 'react-mdr' {
     custom_class?: string;
     color?: string;
     backgroundColor?: string;
-    speed?: number;
-    density?: number;
-    fontSize?: number;
   }
 
   export const MatrixRainingLetters: React.FC<MatrixRainingLettersProps>;
