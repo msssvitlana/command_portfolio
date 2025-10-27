@@ -1,0 +1,38 @@
+.navList {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .navList {
+    display: flex;
+    gap: 20px;
+  }
+
+  .navLink {
+    display: inline-block;
+    padding: 5px 0;
+    font-weight: 500;
+    background: linear-gradient(90deg, var(--accent-color), #f97316, #22c55e);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition:
+      background-position 0.5s ease,
+      transform 0.3s ease;
+  }
+
+  .navLink:hover {
+    background-position: 100% 0;
+    transform: scale(1.1);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .navList {
+    gap: 40px;
+  }
+
+  .navLink {
+    font-size: 18px;
+  }
+}
