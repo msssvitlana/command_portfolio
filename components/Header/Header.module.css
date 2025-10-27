@@ -1,6 +1,7 @@
 .header {
   width: 100%;
   margin: 0 auto;
+
   background: linear-gradient(135deg, #0f172a, #1e293b);
   position: sticky;
   top: 0;
@@ -23,23 +24,30 @@
     0 0 10px rgba(59, 130, 246, 0.7);
   z-index: 10;
   border-radius: 2px;
+
 }
 
 .headerNav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10 16px;
+
+  padding: 10px 16px;
+
 }
 
 @media screen and (min-width: 768px) {
   .headerNav {
-    padding: 10 32px;
+
+    padding: 10px 32px;
+
   }
 }
 
 @media screen and (min-width: 1280px) {
   .headerNav {
+
     padding: 10px 60px;
+
   }
 }

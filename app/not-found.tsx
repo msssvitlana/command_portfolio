@@ -2,18 +2,16 @@
 import { MatrixRainingLetters } from 'react-mdr';
 import styles from './not-found.module.css';
 import Link from 'next/link';
+import Button from '@/components/Button/Button';
 
 export default function NotFound() {
   return (
-    <main className={styles.container}>
+    <section className={styles.container}>
       <MatrixRainingLetters
         className={styles.matrixBackground}
         custom_class={styles.matrixBackground}
-        color="#7ea9ff"
+        color="#021b4dff"
         backgroundColor="#0d1b2a"
-        speed={0.3}
-        density={0.6}
-        fontSize={16}
       />
 
       <div className={styles.content}>
@@ -21,10 +19,10 @@ export default function NotFound() {
         <p className={styles.description}>
           Вибачте, але сторінка, яку ти шукаєш, не існує або була видалена.
         </p>
-        <Link className={styles.link} href="/">
-          Повернутись на головну
+        <Link href="/" passHref>
+          <Button text="Повернутись на головну" className={styles.link}></Button>
         </Link>
       </div>
-    </main>
+    </section>
   );
 }
