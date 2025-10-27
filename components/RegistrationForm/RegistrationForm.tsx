@@ -3,7 +3,6 @@
 import css from './RegistrationForm.module.css';
 import { useRouter } from 'next/navigation';
 import { toast, ToastContainer } from 'react-toastify';
-import { useState } from 'react';
 import { Formik, Form, Field, FieldProps } from 'formik';
 import * as Yup from 'yup';
 import Loader from '../Loader/Loader';
@@ -31,7 +30,6 @@ const initialValues: ValuesProps = {
 
 const RegistrationForm = () => {
   const router = useRouter();
-  //   const [errorMessage, setErrorMessage] = useState('');
 
   const handleSubmit = async (values: ValuesProps) => {
     try {
