@@ -37,17 +37,14 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 1.2;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.05em;
 
     color: rgb(154, 177, 245);
     border-radius: 200px;
     border: 1px solid var(--btn-accent-light);
-    background-color: var(--btn-bg-dark);
 
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-
-    box-shadow: var(--shadow-light);
+    background: linear-gradient(135deg, #1e293b 0%, #2a3a55 100%);
+    box-shadow: 0 1px 8px rgba(245, 150, 50, 0.5);
     transition: all 0.3s ease;
   }
   .homeBtn:hover,
