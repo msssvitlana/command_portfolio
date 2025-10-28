@@ -1,3 +1,4 @@
+'use client';
 import Link from 'next/link';
 import styles from './NavList.module.css';
 import RegistrationModal from '@/components/Modal/RegistrationModal';
