@@ -131,8 +131,6 @@ const RegistrationForm = () => {
               >
                 {isSubmitting ? 'Реєстрація...' : 'Відправити форму'}
               </button>
-              {/* 
-              {errorMessage && <p className={css.errorMessage}>{errorMessage}</p>} */}
             </Form>
           )}
         </Formik>
