@@ -129,7 +129,7 @@ const RegistrationForm = () => {
                 disabled={!dirty || !isValid || isSubmitting}
                 className={css.submitButton}
               >
-                {isSubmitting ? 'Реєстрація...' : 'Відправити форму'}
+                {isSubmitting ? 'Реєстрація...' : 'Зареєструватись'}
               </button>
             </Form>
           )}
