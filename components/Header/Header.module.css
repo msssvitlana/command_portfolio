@@ -24,7 +24,6 @@
     0 0 10px rgba(59, 130, 246, 0.7);
   z-index: 10;
   border-radius: 2px;
-
 }
 
 .headerNav {
@@ -33,21 +32,16 @@
   justify-content: space-between;
 
   padding: 10px 16px;
-
 }
 
 @media screen and (min-width: 768px) {
   .headerNav {
-
     padding: 10px 32px;
-
   }
 }
 
 @media screen and (min-width: 1280px) {
   .headerNav {
-
     padding: 10px 60px;
-
   }
 }

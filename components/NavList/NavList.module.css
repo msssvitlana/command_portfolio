@@ -25,6 +25,42 @@
     background-position: 100% 0;
     transform: scale(1.1);
   }
+  .homeBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    min-width: 130px;
+    padding: 8px 20px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+
+    color: rgb(154, 177, 245);
+    border-radius: 200px;
+    border: 1px solid var(--btn-accent-light);
+
+    background: linear-gradient(135deg, #1e293b 0%, #2a3a55 100%);
+    box-shadow: 0 1px 8px rgba(245, 150, 50, 0.5);
+    transition: all 0.3s ease;
+  }
+  .homeBtn:hover,
+  .homeBtn:focus {
+    background-color: var(--btn-accent-bg-hover);
+    border-color: var(--accent-color);
+    box-shadow: var(--shadow-glow);
+    background-position: 100% 0;
+    transform: scale(1.1);
+  }
+
+  .homeBtn:active {
+    transform: translateY(-1px);
+    background-color: var(--btn-accent-bg-active);
+    box-shadow: var(--shadow-default);
+  }
 }
 
 @media screen and (min-width: 1280px) {
