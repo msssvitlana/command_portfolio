@@ -3,50 +3,39 @@ import Link from 'next/link';
 import styles from './NavList.module.css';
 import RegistrationModal from '@/components/Modal/RegistrationModal';
 import { useState } from 'react';
+import { navItems } from '@/constants/constants';
 
-const NavList = () => {
+type Props = {
+  onClose?: () => void;
+};
+
+const NavList = ({ onClose }: Props) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleOpenModal = () => setIsModalOpen(true);
+  const handleOpenModal = () => {
+    if (onClose) {
+      onClose();
+      setTimeout(() => setIsModalOpen(true), 350);
+    } else {
+      setIsModalOpen(true);
+    }
+  };
   const handleCloseModal = () => setIsModalOpen(false);
+
   return (
     <ul className={styles.navList}>
-      <li className={styles.navItem}>
-        <Link className={styles.navLink} href="/">
-          Головна
-        </Link>
-      </li>
-      <li className={styles.navItem}>
-        <Link className={styles.navLink} href="/about">
-          Про нас
-        </Link>
-      </li>
-      <li className={styles.navItem}>
-        <Link className={styles.navLink} href="/projects">
-          Проекти
-        </Link>
-      </li>
-      <li className={styles.navItem}>
-        <Link className={styles.navLink} href="/services">
-          Послуги
-        </Link>
-      </li>
-      <li className={styles.navItem}>
-        <Link className={styles.navLink} href="/blog">
-          Блог
-        </Link>
-      </li>
-      <li className={styles.navItem}>
-        <Link className={styles.navLink} href="/contact">
-          Контакти
-        </Link>
-      </li>
+      {navItems.map(item => (
+        <li key={item.label} className={styles.navItem} onClick={onClose}>
+          <Link className={styles.navLink} href={item.href}>
+            {item.name}
+          </Link>
+        </li>
+      ))}
       <li className={styles.navItem}>
         <button onClick={handleOpenModal} className={styles.homeBtn}>
           Замовити
         </button>
-
-        <RegistrationModal isOpen={isModalOpen} onClose={handleCloseModal} />
+        {isModalOpen && <RegistrationModal isOpen={isModalOpen} onClose={handleCloseModal} />}
       </li>
     </ul>
   );
