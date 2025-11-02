@@ -16,8 +16,7 @@
   /* Градієнти */
   --bg-gradient-light: linear-gradient(135deg, #0f172a, #1e293b);
   --bg-gradient-dark: linear-gradient(135deg, #0a0f1c, #111827);
-
-  
+  --bg-glass-gradient: linear-gradient(135deg, rgba(90, 90, 150, 0.35), rgba(30, 30, 70, 0.25));
 
   /* Кнопка */
   --btn-bg-dark: rgba(17, 25, 40, 0.4);
@@ -27,8 +26,9 @@
 
   --modal-accent-bg: rgba(255, 182, 193, 0.15);
   --modal-accent-border: rgba(255, 182, 193, 0.4);
-  
 
   --glass-bg: rgba(255, 255, 255, 0.08);
   --glass-border: rgba(255, 255, 255, 0.25);
+  
+  --bg-glass-color: rgba(40, 40, 80, 0.55);
 }

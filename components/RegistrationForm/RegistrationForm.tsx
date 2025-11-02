@@ -33,14 +33,12 @@ const RegistrationForm = () => {
 
   const handleSubmit = async (values: ValuesProps) => {
     try {
-      console.log('Form submitted with:', values);
-
       toast.success('Дані надіслані успішно!');
 
       setTimeout(() => {
-        router.push('/');
+        router.back();
       }, 2000);
-    } catch (error) {
+    } catch {
       toast.error('Щось пішло не так. Спробуйте ще раз.');
     }
   };
