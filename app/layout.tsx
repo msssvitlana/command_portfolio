@@ -4,6 +4,7 @@ import 'modern-normalize';
 import TanStackProvider from '@/components/TanStackProvider/TanStackProvider';
 import Header from '../components/Header/Header';
 import './palette.css';
+import './shadow-palette.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://your-domain.com'),
@@ -51,8 +52,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  modal,
 }: Readonly<{
   children: React.ReactNode;
+  modal: React.ReactNode;
 }>) {
   return (
     <html lang="uk">
@@ -61,10 +64,9 @@ export default function RootLayout({
           <Header />
 
           <main>{children}</main>
+          {modal}
         </TanStackProvider>
       </body>
     </html>
   );
 }
-
-

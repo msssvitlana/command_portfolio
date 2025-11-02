@@ -1,8 +1,12 @@
 .header {
   width: 100%;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
 
-  background: linear-gradient(135deg, #0f172a, #1e293b);
+  background: var(--bg-gradient-light);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -17,11 +21,7 @@
   width: 100%;
   height: 1px;
   background: var(--accent-color-glow);
-  box-shadow:
-    0 2px 6px rgba(59, 130, 246, 0.6),
-    0 4px 12px rgba(59, 130, 246, 0.5),
-    0 8px 20px rgba(59, 130, 246, 0.4),
-    0 0 10px rgba(59, 130, 246, 0.7);
+  box-shadow: var(--header-glow-shadow);
   z-index: 10;
   border-radius: 2px;
 }
@@ -30,18 +30,51 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+}
 
-  padding: 10px 16px;
+.burgerBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 4px;
+  backdrop-filter: blur(12px) saturate(160%);
+  transition: all 0.3s ease;
+}
+
+.burgerBtn:hover,
+.burgerBtn:focus {
+  background: var(--shadow-color-accent-soft);
+  border-color: var(--shadow-color-accent-medium);
+  transform: scale(1.08);
+  box-shadow: 0 0 20px var(--shadow-color-text-glow-2);
+}
+
+.burgerBtnIcon {
+  fill: var(--foreground-muted);
+  transition: fill 0.3s ease;
+}
+
+.burgerBtn:hover .burgerBtnIcon,
+.burgerBtn:focus .burgerBtnIcon {
+  fill: var(--accent-color-light);
 }
 
 @media screen and (min-width: 768px) {
-  .headerNav {
+  .header {
     padding: 10px 32px;
+  }
+
+  .burgerBtn {
+    display: none;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .headerNav {
+  .header {
     padding: 10px 60px;
   }
 }
