@@ -1,0 +1,53 @@
+:root {
+  /* 🎨 Базові кольори тіней */
+  --shadow-color-black-strong: rgba(0, 0, 0, 0.7);
+  --shadow-color-black-medium: rgba(0, 0, 0, 0.6);
+  --shadow-color-black-light: rgba(0, 0, 0, 0.35);
+
+  --shadow-color-accent-strong: rgba(59, 130, 246, 0.6);
+  --shadow-color-accent-medium: rgba(59, 130, 246, 0.5);
+  --shadow-color-accent-light: rgba(59, 130, 246, 0.35);
+  --shadow-color-accent-soft: rgba(59, 130, 246, 0.15);
+  --shadow-color-accent-glow: rgba(59, 130, 246, 0.7);
+
+  --shadow-color-modal-accent: rgba(255, 182, 193, 0.5);
+  --shadow-color-text-glow-1: rgba(59, 130, 246, 0.5);
+  --shadow-color-text-glow-2: rgba(59, 130, 246, 0.4);
+  --shadow-color-text-glow-3: rgba(59, 130, 246, 0.3);
+
+  /* 📏 Глибина тіней */
+  --shadow-depth-sm: 0 2px 6px;
+  --shadow-depth-md: 0 8px 16px;
+  --shadow-depth-lg: 0 12px 24px;
+  --shadow-depth-xl: 0 20px 40px;
+  --shadow-depth-xxl: 0 0 40px;
+
+  /* 🔮 Комбіновані готові тіні */
+  --shadow-default:
+    var(--shadow-depth-md) var(--shadow-color-black-medium),
+    0 0 30px var(--shadow-color-accent-soft);
+
+  --shadow-glow:
+    var(--shadow-depth-lg) var(--shadow-color-black-strong),
+    var(--shadow-depth-xxl) var(--shadow-color-accent-light);
+
+  --shadow-light:
+    var(--shadow-depth-md) var(--shadow-color-black-medium),
+    var(--shadow-depth-xl) var(--shadow-color-black-light),
+    inset 0 -5px 15px rgba(255, 255, 255, 0.05);
+
+  --shadow-elevated:
+    var(--shadow-depth-xxl) var(--shadow-color-accent-light),
+    0 12px 32px var(--shadow-color-black-light);
+
+  --header-glow-shadow:
+    var(--shadow-depth-sm) var(--shadow-color-accent-strong),
+    0 4px 12px var(--shadow-color-accent-medium), 0 8px 20px var(--shadow-color-accent-light),
+    0 0 10px var(--shadow-color-accent-glow);
+
+  --modal-accent-shadow: var(--shadow-color-modal-accent);
+
+  --text-shadow-accent:
+    0 0 8px var(--shadow-color-text-glow-1), 0 0 12px var(--shadow-color-text-glow-2),
+    0 0 20px var(--shadow-color-text-glow-3);
+}

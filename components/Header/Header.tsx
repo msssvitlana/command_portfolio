@@ -9,6 +9,11 @@ const Header = () => {
         <Logo />
         <NavList />
       </nav>
+      <button className={styles.burgerBtn}>
+        <svg width={28} height={28} aria-label="Open Menu" className={styles.burgerBtnIcon}>
+          <use href="/icons.svg#burger"></use>
+        </svg>
+      </button>
     </header>
   );
 };
