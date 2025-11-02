@@ -5,7 +5,8 @@
 @media screen and (min-width: 768px) {
   .navList {
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
+    flex: 1;
   }
 
   .navLink {
@@ -18,13 +19,16 @@
     -webkit-text-fill-color: transparent;
     transition:
       background-position 0.5s ease,
-      transform 0.3s ease;
+      transform 0.3s ease,
+      text-shadow 0.3s ease;
   }
 
   .navLink:hover {
     background-position: 100% 0;
     transform: scale(1.1);
+    text-shadow: var(--text-shadow-accent);
   }
+
   .homeBtn {
     display: flex;
     align-items: center;
@@ -47,6 +51,7 @@
     box-shadow: 0 1px 8px rgba(245, 150, 50, 0.5);
     transition: all 0.3s ease;
   }
+
   .homeBtn:hover,
   .homeBtn:focus {
     background-color: var(--btn-accent-bg-hover);
@@ -65,6 +70,7 @@
 
 @media screen and (min-width: 1280px) {
   .navList {
+    justify-content: flex-end;
     gap: 40px;
   }
 
