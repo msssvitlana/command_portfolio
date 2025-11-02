@@ -1,0 +1,108 @@
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  color: var(--foreground);
+  position: relative;
+
+  background: linear-gradient(to bottom, rgba(31, 31, 46, 1) 50%, rgb(54, 54, 101) 50%);
+}
+.form {
+  width: 100%;
+  height: 300px;
+  padding: 20px;
+  background-color: rgba(20, 20, 30, 0.75);
+  border-radius: 16px;
+  box-shadow: var(--shadow-elevated);
+}
+.contactCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+  text-align: center;
+}
+.socials {
+  gap: 15px;
+}
+.leftSection {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* зміщує контент до верху */
+  gap: 20px; /* відступи між формою і контактами */
+  padding: 20px;
+}
+
+.rightSection {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.infoTable {
+  width: 100%;
+  max-width: 500px;
+  background-color: rgba(20, 20, 30, 0.75);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: var(--shadow-elevated);
+  text-align: left;
+}
+
+.infoTable {
+  background-color: rgba(20, 20, 30, 0.75);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: var(--shadow-elevated);
+  width: 100%;
+  max-width: 500px;
+}
+.contactCard {
+  padding: 20px;
+  border-radius: 16px;
+  width: 100%;
+  /* max-width: 300px; */
+}
+
+.contactIntro {
+  margin-bottom: 15px;
+}
+
+.contactInfoList,
+.socialsList {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0;
+}
+
+.contactInfoList li {
+  display: flex;
+  /* align-items: center; */
+  gap: 10px;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.icon {
+  color: var(--accent-color-light);
+}
+
+.socialsList {
+  display: flex;
+  gap: 10px;
+}
+
+.socialsList li a {
+  font-size: 1.2rem;
+  color: var(--foreground);
+  transition: color 0.3s;
+}
+
+.socialsList li a:hover {
+  color: var(--accent-color-light);
+}
