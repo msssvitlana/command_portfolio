@@ -8,7 +8,7 @@ export default function InfoTable() {
     <div className={styles.infoTable}>
       <h2 className={styles.infoTitle}>Ми завжди на зв’язку </h2>
       <p className={styles.infoSubtitle}>
-        <FaRegSmileBeam className={styles.icon} /> Працюємо без вихідних, щоб допомогти саме вам!
+        <FaRegSmileBeam className={styles.icon} /> Працюємо без вихідних, щоб допомогти саме Вам!
       </p>
 
       <table className={styles.infoBody}>

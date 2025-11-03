@@ -8,7 +8,7 @@ export default function ContactInfo() {
     <div className={styles.contactCard}>
       <div className={styles.contactIntro}>
         <h2 className={styles.contactTitle}>Звʼяжіться з нами</h2>
-        <p className={styles.contactSubtitle}>Ми завжди відкриті до ваших ідей</p>
+        <p className={styles.contactSubtitle}>Ми завжди відкриті до Ваших ідей</p>
       </div>
 
       <ul className={styles.contactInfoList}>
