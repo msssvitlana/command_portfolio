@@ -1,23 +1,32 @@
 'use client';
 
 import styles from './ContactPage.module.css';
+import { FaClock, FaRegSmileBeam } from 'react-icons/fa';
 
 export default function InfoTable() {
   return (
     <div className={styles.infoTable}>
-      <h2>Ми тут, щоб допомогти</h2>
-      <table>
+      <h2 className={styles.infoTitle}>Ми завжди на зв’язку </h2>
+      <p className={styles.infoSubtitle}>
+        <FaRegSmileBeam className={styles.icon} /> Працюємо без вихідних, щоб допомогти саме вам!
+      </p>
+
+      <table className={styles.infoBody}>
         <tbody>
           <tr>
-            <td>Пн–Пт:</td>
-            <td> 09:00–18:00</td>
-          </tr>
-          <tr>
-            <td>Сб–Нд:</td>
-            <td>вихідні</td>
+            <td>
+              <FaClock className={styles.icon} /> Графік роботи:
+            </td>
+            <td>
+              Цілодобово — <strong>24/7</strong>
+            </td>
           </tr>
         </tbody>
       </table>
+
+      <p className={styles.infoFooter}>
+        Пишіть нам у будь-який час — ми завжди поруч і готові допомогти
+      </p>
     </div>
   );
 }

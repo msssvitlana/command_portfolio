@@ -32,7 +32,7 @@
   height: 100%;
   border-radius: 20px;
   margin: 0 auto;
-  padding: 40px 10px;
+
   background-color: var(--bg-glass-color);
   box-shadow: 0 8px 32px var(--shadow-color-black-medium);
   backdrop-filter: blur(18px) saturate(180%);

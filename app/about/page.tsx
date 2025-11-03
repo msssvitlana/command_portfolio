@@ -3,13 +3,15 @@ import styles from './page.module.css';
 import '../globals.css';
 import AboutInfoBlock from '@/components/AboutInfoBlock/AboutInfoBlock';
 import Button from '@/components/Button/Button';
-
+import Link from 'next/link';
 const About = () => {
   return (
     <section className={styles.section}>
       <AboutInfoBlock />
       <TeamList />
-      <Button text="Зв'язатись з нами" className={styles.contactBtn} />
+      <Link href="/contact">
+        <Button text="Зв'язатись з нами" className={styles.contactBtn} />
+      </Link>
     </section>
   );
 };

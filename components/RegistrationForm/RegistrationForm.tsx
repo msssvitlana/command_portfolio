@@ -7,6 +7,13 @@ import { Formik, Form, Field, FieldProps } from 'formik';
 import * as Yup from 'yup';
 import Loader from '../Loader/Loader';
 
+type RegistrationFormProps = {
+  /** Текст заголовка (опціонально) */
+  title?: string;
+  /** Підзаголовок або опис під заголовком */
+  subtitle?: string;
+};
+
 const SignupSchema = Yup.object().shape({
   name: Yup.string()
     .min(1, 'Мінімум 1 символ')
@@ -31,7 +38,10 @@ const initialValues: ValuesProps = {
   message: '',
 };
 
-const RegistrationForm = () => {
+const RegistrationForm = ({
+  title = 'Привіт! Ми раді вас чути!',
+  subtitle = 'Якщо у Вас є питання, побажання чи ідеї — залиште нам повідомлення, і ми обов’язково відповімо!',
+}: RegistrationFormProps) => {
   const router = useRouter();
 
   const handleSubmit = async (values: ValuesProps) => {
@@ -45,14 +55,13 @@ const RegistrationForm = () => {
       toast.error('Щось пішло не так. Спробуйте ще раз.');
     }
   };
+
   return (
     <div className={styles.mainContent}>
       <div className={styles.wrapper}>
-        <h1 className={styles.formTitle}> Привіт! Ми раді вас чути!</h1>
-        <p className={styles.subtitle}>
-          Якщо у Вас є питання, побажання чи ідеї — залиште нам повідомлення, і ми обов’язково
-          відповімо Вам.
-        </p>
+        <h1 className={styles.formTitle}>{title}</h1>
+        <p className={styles.subtitle}>{subtitle}</p>
+
         <Formik
           initialValues={initialValues}
           validationSchema={SignupSchema}

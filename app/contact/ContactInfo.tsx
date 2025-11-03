@@ -1,13 +1,6 @@
 'use client';
 
-import {
-  FaPhone,
-  FaEnvelope,
-  FaMapMarkerAlt,
-  FaFacebook,
-  FaInstagram,
-  FaLinkedin,
-} from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import styles from './ContactPage.module.css';
 
 export default function ContactInfo() {
@@ -19,11 +12,11 @@ export default function ContactInfo() {
       </div>
 
       <ul className={styles.contactInfoList}>
-        <li>
+        <li className={styles.contactInfoItem}>
           <FaPhone className={styles.icon} />
           <a href="tel:+380501234567">+38 (050) ***-**-**</a>
         </li>
-        <li>
+        <li className={styles.contactInfoItem}>
           <FaEnvelope className={styles.icon} />
           <a href="mailto:info@mysite.ua">test@test.com</a>
         </li>
@@ -31,17 +24,32 @@ export default function ContactInfo() {
 
       <ul className={styles.socialsList}>
         <li>
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+          <a
+            className={styles.socialsItem}
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaFacebook />
           </a>
         </li>
         <li>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <a
+            className={styles.socialsItem}
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaInstagram />
           </a>
         </li>
         <li>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+          <a
+            className={styles.socialsItem}
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaLinkedin />
           </a>
         </li>

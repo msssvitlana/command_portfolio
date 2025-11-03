@@ -9,17 +9,18 @@ export default function ContactPage() {
   return (
     <section className={styles.wrapper}>
       <div className={styles.leftSection}>
-        <ContactInfo />
-        <div className={styles.rightSection}>
-          <div className={styles.infoTable}>
-            <InfoTable />
-          </div>
+        <div className={styles.infoTable}>
+          <InfoTable />
         </div>
+        <ContactInfo />
       </div>
 
       <div className={styles.rightSection}>
         <div className={styles.form}>
-          <RegistrationForm />
+          <RegistrationForm
+            title="Давайте спілкуватись"
+            subtitle="Можливо, це саме те повідомлення, яке зробить наш день кращим"
+          />
         </div>
       </div>
     </section>
