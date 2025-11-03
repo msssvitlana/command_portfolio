@@ -17,7 +17,7 @@ export default function NotFound() {
       <div className={styles.content}>
         <h1 className={styles.title}>404 — Сторінку не знайдено</h1>
         <p className={styles.description}>
-          Вибачте, але сторінка, яку ти шукаєш, не існує або була видалена.
+          Вибачте, але сторінка, яку Ви шукаєте, не існує або була видалена.
         </p>
         <Link href="/" passHref>
           <Button text="Повернутись на головну" className={styles.link}></Button>

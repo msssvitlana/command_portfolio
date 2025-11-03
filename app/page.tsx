@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 import styles from './page.module.css';
-import RegistrationModal from '@/components/Modal/RegistrationModal';
-
+import RegistrationForm from '@/components/RegistrationForm/RegistrationForm';
+import ModalDefault from '@/components/Modal/ModalDefault/ModalDefault';
 const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -20,12 +20,14 @@ const Home = () => {
           <span>Сайти та застосунки під ключ — швидко, стильно та без зайвого клопоту.</span>
         </p>
       </div>
-
       <button onClick={handleOpenModal} className={styles.homeBtn}>
         Замовити зараз
       </button>
-
-      <RegistrationModal isOpen={isModalOpen} onClose={handleCloseModal} />
+      {isModalOpen && (
+        <ModalDefault isOpen={isModalOpen} onClose={handleCloseModal}>
+          <RegistrationForm />
+        </ModalDefault>
+      )}
     </section>
   );
 };

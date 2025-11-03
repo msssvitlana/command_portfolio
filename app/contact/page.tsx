@@ -9,14 +9,17 @@ export default function ContactPage() {
   return (
     <section className={styles.wrapper}>
       <div className={styles.leftSection}>
-        <div className={styles.form}>{/* <RegistrationForm /> */}</div>
-
         <ContactInfo />
+        <div className={styles.rightSection}>
+          <div className={styles.infoTable}>
+            <InfoTable />
+          </div>
+        </div>
       </div>
 
       <div className={styles.rightSection}>
-        <div className={styles.infoTable}>
-          <InfoTable />
+        <div className={styles.form}>
+          <RegistrationForm />
         </div>
       </div>
     </section>
