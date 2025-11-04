@@ -7,7 +7,7 @@ import styles from './ContactPage.module.css';
 
 export default function ContactPage() {
   return (
-    <section className={styles.wrapper}>
+    <section className={styles.section}>
       <div className={styles.leftSection}>
         <div className={styles.infoTable}>
           <InfoTable />

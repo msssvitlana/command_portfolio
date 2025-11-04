@@ -14,7 +14,7 @@ export default function InfoTable() {
       <table className={styles.infoBody}>
         <tbody>
           <tr>
-            <td>
+            <td className={styles.infoTime}>
               <FaClock className={styles.icon} /> Графік роботи:
             </td>
             <td>
