@@ -43,39 +43,45 @@ const NotFoundPosts = () => {
         <span className={styles.glowLayer}></span>
       </div>
 
-      <p className={styles.notFoundSubtitle}>
-        Щоб не сумувати, ось кілька цікавих кроків прямо зараз:
-      </p>
-
-      <ul className={styles.navList}>
-        <li className={styles.navItem}>
-          <Icon width={20} height={20} iconName="icon_proj" className={styles.iconNavItem} />
-          <Link className={styles.navLink} href="/projects">
-            Наші роботи, реалізовані на практиці
-          </Link>
-        </li>
-        <li className={styles.navItem}>
-          <Icon width={20} height={20} iconName="icon_serv" className={styles.iconNavItem} />
-          <Link className={styles.navLink} href="/services">
-            Дізнатись, що ми можемо для вас створити
-          </Link>
-        </li>
-        <li className={styles.navItem}>
-          <Icon width={20} height={20} iconName="icon_mail_clear" className={styles.iconNavItem} />
-          <Link className={styles.navLink} href="/contact">
-            Написати нам і обговорити ваш проєкт
-          </Link>
-        </li>
-        <li className={styles.navItem}>
-          <Icon width={20} height={20} iconName="icon_back" className={styles.iconNavItem} />
-          <Button
-            text="Повернутись на попередню сторінку"
-            onClick={back}
-            type="button"
-            className={styles.navBtn}
-          />
-        </li>
-      </ul>
+      <div className={styles.navBlock}>
+        <p className={styles.notFoundSubtitle}>
+          Щоб не сумувати, ось кілька цікавих кроків прямо зараз:
+        </p>
+        <ul className={styles.navList}>
+          <li className={styles.navItem}>
+            <Icon width={20} height={20} iconName="icon_proj" className={styles.iconNavItem} />
+            <Link className={styles.navLink} href="/projects">
+              Наші роботи, реалізовані на практиці
+            </Link>
+          </li>
+          <li className={styles.navItem}>
+            <Icon width={20} height={20} iconName="icon_serv" className={styles.iconNavItem} />
+            <Link className={styles.navLink} href="/services">
+              Дізнатись, що ми можемо для вас створити
+            </Link>
+          </li>
+          <li className={styles.navItem}>
+            <Icon
+              width={20}
+              height={20}
+              iconName="icon_mail_clear"
+              className={styles.iconNavItem}
+            />
+            <Link className={styles.navLink} href="/contact">
+              Написати нам і обговорити ваш проєкт
+            </Link>
+          </li>
+          <li className={styles.navItem}>
+            <Icon width={20} height={20} iconName="icon_back" className={styles.iconNavItem} />
+            <Button
+              text="Повернутись на попередню сторінку"
+              onClick={back}
+              type="button"
+              className={styles.navBtn}
+            />
+          </li>
+        </ul>
+      </div>
     </section>
   );
 };

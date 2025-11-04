@@ -13,6 +13,7 @@
   --team-card-border: rgba(59, 130, 246, 0.25);
   --team-card-hover: rgba(30, 58, 138, 0.8);
   --section-bg-color: #0a0f1c;
+  --nav-block-bg: rgba(17, 25, 40, 0.35);
 
   /* Конічні градієнти для анімації */
   --section-gradient-1: conic-gradient(from 0deg, #3b82f6, #f43f5e, #facc15, #10b981, #3b82f6);
