@@ -50,4 +50,6 @@
   --text-shadow-accent:
     0 0 8px var(--shadow-color-text-glow-1), 0 0 12px var(--shadow-color-text-glow-2),
     0 0 20px var(--shadow-color-text-glow-3);
+    
+  --shadow-nav-block: 0 8px 20px var(--shadow-color-black-medium);
 }
