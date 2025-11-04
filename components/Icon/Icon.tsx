@@ -8,7 +8,7 @@ type IconProps = {
 const Icon = ({width, height, className, iconName}: IconProps) => {
   return (
     <svg className={className} width={width} height={height}>
-      <use href={`/icons.svg#${iconName}`}></use>
+      <use href={`/icons.svg?v=2#${iconName}`}></use>
     </svg>
   );
 }
