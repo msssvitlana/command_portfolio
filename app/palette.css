@@ -12,6 +12,12 @@
   --team-card-bg: rgba(17, 25, 40, 0.2);
   --team-card-border: rgba(59, 130, 246, 0.25);
   --team-card-hover: rgba(30, 58, 138, 0.8);
+  --section-bg-color: #0a0f1c;
+
+  /* Конічні градієнти для анімації */
+  --section-gradient-1: conic-gradient(from 0deg, #3b82f6, #f43f5e, #facc15, #10b981, #3b82f6);
+
+  --section-gradient-2: conic-gradient(from 180deg, #60a5fa, #3b82f6, #22c55e, #f97316, #60a5fa);
 
   /* Градієнти */
   --bg-gradient-light: linear-gradient(135deg, #0f172a, #1e293b);
@@ -29,6 +35,6 @@
 
   --glass-bg: rgba(255, 255, 255, 0.08);
   --glass-border: rgba(255, 255, 255, 0.25);
-  
+
   --bg-glass-color: rgba(40, 40, 80, 0.55);
 }
