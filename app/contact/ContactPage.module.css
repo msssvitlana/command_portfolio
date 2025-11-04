@@ -3,25 +3,61 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  /* background: linear-gradient(to bottom, rgba(31, 31, 46, 1) 50%, rgb(131, 184, 233) 40%); */
+  max-width: 375px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  background-color: #0a0f1c;
 }
 
+.section::before {
+  content: '';
+  position: absolute;
+  top: -60%;
+  left: -60%;
+  width: 220%;
+  height: 220%;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, #3b82f6, #f43f5e, #facc15, #10b981, #3b82f6);
+  opacity: 0.25;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+  animation: rotateLayer1 8s linear infinite;
+}
+
+.section::after {
+  content: '';
+  position: absolute;
+  top: -70%;
+  left: -70%;
+  width: 240%;
+  height: 240%;
+  border-radius: 50%;
+  background: conic-gradient(from 180deg, #60a5fa, #3b82f6, #22c55e, #f97316, #60a5fa);
+  opacity: 0.18;
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: 0;
+  animation: rotateLayer2 15s linear infinite reverse;
+}
 .form {
   width: 100%;
-  background-color: rgba(16, 16, 25, 0.85);
-  z-index: 999;
+  background-color: rgba(14, 14, 21, 0.65);
   border-radius: 16px;
   box-shadow: var(--shadow-elevated);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(8px);
   transition:
     transform 0.3s ease,
-    box-shadow 0.3s ease;
-  padding: 20px;
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .form:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+  background-color: rgba(30, 30, 40, 0.8);
 }
 
 .contactCard {
@@ -108,7 +144,9 @@
 }
 
 .infoBody td {
-  padding: 12px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1.05rem;
   color: #e2e8f0;
   text-align: left;
@@ -149,16 +187,23 @@
   z-index: 1;
   text-shadow: 0 0 5px rgba(59, 130, 246, 0.2);
 }
-
+.contactIntro {
+  padding: 0 15px;
+}
+.contactSubtitle {
+  padding: 0 25px;
+}
 .contactInfoList,
 .socialsList {
   list-style: none;
-  padding: 0;
+  /* padding: 0 20px; */
 }
 
 .contactInfoItem {
   display: flex;
   align-items: center;
+  padding: 0 20px;
+
   gap: 10px;
   font-size: 0.95rem;
   color: var(--foreground);
@@ -198,49 +243,6 @@
   padding: 20px;
   gap: 20px;
 }
-.section {
-  padding: 24px 16px;
-  width: 100%;
-  min-height: 88vh;
-  max-width: 375px;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-  z-index: 0;
-  background-color: #0a0f1c;
-}
-
-.section::before {
-  content: '';
-  position: absolute;
-  top: -60%;
-  left: -60%;
-  width: 220%;
-  height: 220%;
-  border-radius: 50%;
-  background: conic-gradient(from 0deg, #3b82f6, #f43f5e, #facc15, #10b981, #3b82f6);
-  opacity: 0.25;
-  filter: blur(80px);
-  pointer-events: none;
-  z-index: 0;
-  animation: rotateLayer1 8s linear infinite;
-}
-
-.section::after {
-  content: '';
-  position: absolute;
-  top: -70%;
-  left: -70%;
-  width: 240%;
-  height: 240%;
-  border-radius: 50%;
-  background: conic-gradient(from 180deg, #60a5fa, #3b82f6, #22c55e, #f97316, #60a5fa);
-  opacity: 0.18;
-  filter: blur(100px);
-  pointer-events: none;
-  z-index: 0;
-  animation: rotateLayer2 15s linear infinite reverse;
-}
 
 @keyframes rotateLayer1 {
   0% {
@@ -261,24 +263,14 @@
 }
 @media screen and (min-width: 768px) {
   .section {
-    padding: 24px 32px;
     max-width: 1024px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .section {
-    padding: 40px 60px;
-    max-width: 1600px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .section {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px 20px;
+  }
+  .form {
+    padding: 20px;
   }
   .contactCard {
     flex-direction: column;
@@ -293,6 +285,7 @@
 
 @media screen and (min-width: 1280px) {
   .section {
+    max-width: 1600px;
     display: flex;
     flex-direction: row;
     justify-content: center;
