@@ -1,11 +1,18 @@
 'use client';
 
-import css from './RegistrationForm.module.css';
+import styles from './RegistrationForm.module.css';
 import { useRouter } from 'next/navigation';
 import { toast, ToastContainer } from 'react-toastify';
 import { Formik, Form, Field, FieldProps } from 'formik';
 import * as Yup from 'yup';
 import Loader from '../Loader/Loader';
+
+type RegistrationFormProps = {
+  /** Текст заголовка (опціонально) */
+  title?: string;
+  /** Підзаголовок або опис під заголовком */
+  subtitle?: string;
+};
 
 const SignupSchema = Yup.object().shape({
   name: Yup.string()
@@ -13,27 +20,33 @@ const SignupSchema = Yup.object().shape({
     .required('Ім’я є обов’язковим')
     .matches(/^[a-zA-Zа-яА-ЯёЁіІїЇєЄґҐ0-9\s'-]+$/, 'Ім’я може містити лише літери та цифри'),
   email: Yup.string().email('Невірна пошта').required('Пошта є обов’язковою'),
-  comment: Yup.string().max(300, 'Максимум 300 символів'),
+  message: Yup.string()
+    .min(5, 'Мінімум 5 символів')
+    .max(500, 'Максимум 500 символів')
+    .required('Повідомлення є обов’язковим'),
 });
 
 type ValuesProps = {
   name: string;
   email: string;
-  comment: string;
+  message: string;
 };
 
 const initialValues: ValuesProps = {
   name: '',
   email: '',
-  comment: '',
+  message: '',
 };
 
-const RegistrationForm = () => {
+const RegistrationForm = ({
+  title = 'Привіт! Ми раді вас чути!',
+  subtitle = 'Якщо у Вас є питання, побажання чи ідеї — залиште нам повідомлення, і ми обов’язково відповімо!',
+}: RegistrationFormProps) => {
   const router = useRouter();
 
   const handleSubmit = async (values: ValuesProps) => {
     try {
-      toast.success('Дані надіслані успішно!');
+      toast.success('Дякуємо за ваш відгук! Ми зв’яжемося з Вами найближчим часом.');
 
       setTimeout(() => {
         router.back();
@@ -42,40 +55,42 @@ const RegistrationForm = () => {
       toast.error('Щось пішло не так. Спробуйте ще раз.');
     }
   };
+
   return (
-    <div className={css.mainContent}>
-      <div className={css.wrapper}>
-        <h1 className={css.formTitle}>Реєстрація</h1>
+    <div className={styles.mainContent}>
+      <div className={styles.wrapper}>
+        <h1 className={styles.formTitle}>{title}</h1>
+        <p className={styles.subtitle}>{subtitle}</p>
 
         <Formik
           initialValues={initialValues}
+          validationSchema={SignupSchema}
           validateOnChange={true}
           validateOnBlur={true}
-          validationSchema={SignupSchema}
           onSubmit={handleSubmit}
         >
           {({ dirty, isValid, isSubmitting }) => (
-            <Form className={css.form}>
+            <Form className={styles.form}>
               {isSubmitting && <Loader />}
 
               <Field name="name">
                 {({ field, meta }: FieldProps<string>) => (
-                  <div className={css.formGroup}>
+                  <div className={styles.formGroup}>
                     <label
                       htmlFor="name"
-                      className={`${css.formLabel} ${meta.touched && meta.error ? css.labelError : ''}`}
+                      className={`${styles.formLabel} ${meta.touched && meta.error ? styles.labelError : ''}`}
                     >
-                      Імʼя*
+                      Ім’я*
                     </label>
                     <input
                       {...field}
                       id="name"
                       type="text"
                       placeholder="Ваше ім’я"
-                      className={`${css.input} ${meta.touched && meta.error ? css.inputError : ''}`}
+                      className={`${styles.input} ${meta.touched && meta.error ? styles.inputError : ''}`}
                     />
                     {meta.touched && meta.error && (
-                      <div className={css.errorText}>{meta.error}</div>
+                      <div className={styles.errorText}>{meta.error}</div>
                     )}
                   </div>
                 )}
@@ -83,10 +98,10 @@ const RegistrationForm = () => {
 
               <Field name="email">
                 {({ field, meta }: FieldProps<string>) => (
-                  <div className={css.formGroup}>
+                  <div className={styles.formGroup}>
                     <label
                       htmlFor="email"
-                      className={`${css.formLabel} ${meta.touched && meta.error ? css.labelError : ''}`}
+                      className={`${styles.formLabel} ${meta.touched && meta.error ? styles.labelError : ''}`}
                     >
                       Пошта*
                     </label>
@@ -95,43 +110,49 @@ const RegistrationForm = () => {
                       id="email"
                       type="email"
                       placeholder="you@example.com"
-                      className={`${css.input} ${meta.touched && meta.error ? css.inputError : ''}`}
+                      className={`${styles.input} ${meta.touched && meta.error ? styles.inputError : ''}`}
                     />
                     {meta.touched && meta.error && (
-                      <div className={css.errorText}>{meta.error}</div>
+                      <div className={styles.errorText}>{meta.error}</div>
                     )}
                   </div>
                 )}
               </Field>
 
-              <Field name="comment">
+              <Field name="message">
                 {({ field, meta }: FieldProps<string>) => (
-                  <>
+                  <div className={styles.formGroup}>
+                    <label
+                      htmlFor="message"
+                      className={`${styles.formLabel} ${meta.touched && meta.error ? styles.labelError : ''}`}
+                    >
+                      Повідомлення*
+                    </label>
                     <textarea
                       {...field}
-                      id="comment"
-                      placeholder="Коментар"
-                      className={`${css.textarea} ${
-                        meta.touched && meta.error ? css.inputError : ''
-                      }`}
+                      id="message"
+                      placeholder="Ваше повідомлення"
+                      className={`${styles.textarea} ${meta.touched && meta.error ? styles.inputError : ''}`}
                       rows={4}
                     />
                     {meta.touched && meta.error && (
-                      <div className={css.errorText}>{meta.error}</div>
+                      <div className={styles.errorText}>{meta.error}</div>
                     )}
-                  </>
+                  </div>
                 )}
               </Field>
+
               <button
                 type="submit"
                 disabled={!dirty || !isValid || isSubmitting}
-                className={css.submitButton}
+                className={styles.submitButton}
               >
-                {isSubmitting ? 'Реєстрація...' : 'Відправити форму'}
+                {isSubmitting ? 'Надсилаємо...' : 'Надіслати'}
               </button>
             </Form>
           )}
         </Formik>
+
         <ToastContainer position="top-center" autoClose={3000} />
       </div>
     </div>

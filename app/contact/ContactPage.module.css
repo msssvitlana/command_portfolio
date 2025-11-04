@@ -1,0 +1,229 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(31, 31, 46, 1) 50%, rgb(131, 184, 233) 40%);
+}
+
+.form {
+  width: 100%;
+  background-color: rgba(16, 16, 25, 0.85);
+  z-index: 999;
+  border-radius: 16px;
+  box-shadow: var(--shadow-elevated);
+  backdrop-filter: blur(10px);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  padding: 20px;
+}
+
+.form:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+}
+
+.contactCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  text-align: center;
+  padding: 20px 0;
+  border-radius: 16px;
+  background-color: rgba(20, 20, 30, 0.65);
+  backdrop-filter: blur(8px);
+  box-shadow: var(--shadow-elevated);
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.contactCard:hover {
+  background-color: rgba(30, 30, 40, 0.8);
+}
+
+.infoTable {
+  background: radial-gradient(circle at top left, rgba(12, 14, 22, 0.95), rgba(37, 37, 55, 0.98));
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 10px 10px;
+  width: 100%;
+  text-align: center;
+  color: #e5e7eb;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.infoTable::before {
+  content: '';
+  position: absolute;
+  top: -60%;
+  left: -60%;
+  width: 220%;
+  height: 220%;
+  background: conic-gradient(from 180deg at 50% 50%, #6a8cf0, #a0b9f2, #7a69d9, #5c7ee0, #6a8cf0);
+  filter: blur(100px);
+  opacity: 0.07;
+  animation: rotate 8s linear infinite;
+  z-index: 0;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.infoTitle {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--accent-color-light);
+  text-shadow: 0 0 10px rgba(37, 99, 235, 0.5);
+  position: relative;
+  z-index: 1;
+}
+
+.infoSubtitle {
+  margin-bottom: 28px;
+  line-height: 1.5;
+  position: relative;
+  z-index: 1;
+}
+
+.infoBody {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  position: relative;
+  z-index: 1;
+}
+
+.infoBody td {
+  padding: 12px 10px;
+  font-size: 1.05rem;
+  color: #e2e8f0;
+  text-align: left;
+}
+
+.infoBody td:first-child {
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+.icon {
+  color: var(--accent-color);
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.infoBody strong {
+  color: #38bdf8;
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.9);
+  animation: glow 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px rgba(56, 189, 248, 0.4);
+  }
+  to {
+    text-shadow: 0 0 15px rgba(56, 189, 248, 1);
+  }
+}
+
+.infoFooter {
+  margin-top: 28px;
+  font-size: 1rem;
+  color: var(--foreground);
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 0 5px rgba(59, 130, 246, 0.2);
+}
+
+.contactInfoList,
+.socialsList {
+  list-style: none;
+  padding: 0;
+}
+
+.contactInfoItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: var(--foreground);
+}
+
+.icon {
+  color: var(--accent-color-light);
+}
+
+.socialsList {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialsItem {
+  font-size: 1.4rem;
+  color: var(--foreground);
+  transition:
+    color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.socialsItem:hover {
+  color: var(--accent-color-light);
+  transform: scale(1.1);
+}
+
+.leftSection,
+.rightSection {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+  }
+  .contactCard {
+    flex-direction: column;
+    align-items: center;
+  }
+  .infoTable {
+    padding: 30px 30px;
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px 20px;
+    width: 100%;
+    gap: 80px;
+  }
+}
