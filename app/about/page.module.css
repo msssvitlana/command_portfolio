@@ -3,7 +3,7 @@
   width: 100%;
   max-width: 375px;
   margin: 0 auto;
-  background-image: url('/images/about/about-bg.webp');
+  /* background-image: url('/images/about/about-bg.webp'); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
