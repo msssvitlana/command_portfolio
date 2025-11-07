@@ -7,7 +7,7 @@ export const formatDate = ({ date }: Props) => {
   const d = typeof date === 'string' ? new Date(date) : date;
   return d.toLocaleDateString('uk-UA', {
     year: 'numeric',
-    month: 'long',
+    month: 'numeric',
     day: 'numeric',
   });
 };

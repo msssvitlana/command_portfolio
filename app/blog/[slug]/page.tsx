@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { client } from '@/sanity/lib/client';
 import { urlFor } from '@/sanity/lib/image';
 import { PortableText, type PortableTextBlock } from '@portabletext/react';
+import Link from 'next/link';
 
 export type FullBlogPost = {
   title: string;
@@ -12,7 +13,10 @@ export type FullBlogPost = {
   };
   content: PortableTextBlock[];
   publishedAt?: string;
-  author?: string;
+  author?: {
+    name?: string;
+    role?: string;
+  };
 };
 
 async function getPost(slug: string): Promise<FullBlogPost | null> {
@@ -21,7 +25,10 @@ async function getPost(slug: string): Promise<FullBlogPost | null> {
     mainImage,
     content,
     publishedAt,
-    author
+    author->{
+    name,
+    role
+  }
   }`;
   return await client.fetch<FullBlogPost | null>(query, { slug });
 }
@@ -32,29 +39,41 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
   if (!post) return notFound();
 
   return (
-    <article>
+    <article aria-labelledby="post-title">
       <header>
-        <h1>{post.title}</h1>
+        <h1 id="post-title">{post.title}</h1>
+
         <p>
-          {post.author && <span>{post.author}</span>}
+          {post.author && (
+            <span>
+              {post.author.name}
+              {post.author.role && ` (${post.author.role})`} •{' '}
+            </span>
+          )}
           {post.publishedAt && (
             <time dateTime={post.publishedAt}>
               {new Date(post.publishedAt).toLocaleDateString('uk-UA')}
             </time>
           )}
         </p>
-        {post.mainImage && (
-          <Image
-            src={urlFor(post.mainImage).width(800).url()}
-            alt={post.title}
-            width={800}
-            height={500}
-          />
-        )}
       </header>
+
+      {post.mainImage && (
+        <figure>
+          <Image
+            src={urlFor(post.mainImage).width(1000).height(600).url()}
+            alt={post.title}
+            width={1000}
+            height={600}
+            priority
+          />
+          <figcaption>{post.title}</figcaption>
+        </figure>
+      )}
 
       <section>
         <PortableText value={post.content} />
+        <Link href="/blog">← Повернутись до списку статей</Link>
       </section>
     </article>
   );

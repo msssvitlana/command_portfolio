@@ -11,10 +11,9 @@
   padding: 10px 16px;
 
   background: var(--bg-gradient-light);
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1000;
-  position: relative;
 }
 
 .header::after {
