@@ -1,26 +1,8 @@
-.section {
-  padding: 24px 16px;
-  width: 100%;
-  max-width: 375px;
-  margin: 0 auto;
-  /* background-image: url('/images/about/about-bg.webp'); */
+.sectionAbout {
+  background-image: url('/images/about/about-bg.webp');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-@media screen and (min-width: 768px) {
-  .section {
-    padding: 24px 32px;
-    max-width: 1024px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .section {
-    padding: 40px 60px;
-    max-width: 1600px;
-  }
 }
 
 .contactBtn {
