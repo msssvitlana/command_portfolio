@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import styles from './NotFoundPosts.module.css';
-import Button from '@/components/Button/Button';
+import Button from '@/components/Ui/Button/Button';
 
 const NotFoundPosts = () => {
   const router = useRouter();

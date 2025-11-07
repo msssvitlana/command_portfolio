@@ -2,7 +2,7 @@
 import { MatrixRainingLetters } from 'react-mdr';
 import styles from './not-found.module.css';
 import Link from 'next/link';
-import Button from '@/components/Button/Button';
+import Button from '@/components/Ui/Button/Button';
 
 export default function NotFound() {
   return (
