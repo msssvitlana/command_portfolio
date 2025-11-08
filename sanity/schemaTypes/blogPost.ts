@@ -41,6 +41,13 @@ export default defineType({
       of: [{ type: 'block' }, { type: 'image', options: { hotspot: true } }],
     }),
     defineField({
+      name: 'extendedContent',
+      title: 'Extended Content',
+      type: 'array',
+      of: [{ type: 'block' }, { type: 'image', options: { hotspot: true } }],
+      description: 'Detailed article content that will be displayed below the main image',
+    }),
+    defineField({
       name: 'author',
       title: 'Author',
       type: 'reference',
