@@ -3,6 +3,16 @@
   --shadow-color-black-strong: rgba(0, 0, 0, 0.7);
   --shadow-color-black-medium: rgba(0, 0, 0, 0.6);
   --shadow-color-black-light: rgba(0, 0, 0, 0.35);
+  --shadow-color-black-soft: rgba(0, 0, 0, 0.2);
+  --shadow-color-black-medium-strong: rgba(0, 0, 0, 0.15);
+  --shadow-color-black-subtle: rgba(0, 0, 0, 0.12);
+  --shadow-color-black-extra-subtle: rgba(0, 0, 0, 0.08);
+  --shadow-color-black-soft-strong: rgba(0, 0, 0, 0.1);
+
+  --foreground-white-soft: rgba(255, 255, 255, 0.85);
+  --white-shadow-light: rgba(255, 255, 255, 0.2);
+  --surface-white-soft: rgba(255, 255, 255, 0.1);
+  --shadow-color-white-soft: rgba(255, 255, 255, 0.06);
 
   --shadow-color-accent-strong: rgba(59, 130, 246, 0.6);
   --shadow-color-accent-medium: rgba(59, 130, 246, 0.5);
@@ -50,6 +60,8 @@
   --text-shadow-accent:
     0 0 8px var(--shadow-color-text-glow-1), 0 0 12px var(--shadow-color-text-glow-2),
     0 0 20px var(--shadow-color-text-glow-3);
-    
+
   --shadow-nav-block: 0 8px 20px var(--shadow-color-black-medium);
+  --shadow-soft-mixed:
+    0 8px 20px var(--shadow-color-black-subtle), 0 0 15px var(--shadow-color-white-soft);
 }

@@ -7,6 +7,7 @@ import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import styles from './NotFoundPosts.module.css';
 import Button from '@/components/Ui/Button/Button';
+import Section from '@/components/Ui/Section/Section';
 
 const NotFoundPosts = () => {
   const router = useRouter();
@@ -24,7 +25,7 @@ const NotFoundPosts = () => {
     }
   };
   return (
-    <section className={styles.section}>
+    <Section className={styles.section}>
       <div className={styles.notFoundText}>
         <h2 className={styles.notFoundTitle}>
           {greeting}! <span>Сторінка ще відпочиває.</span>{' '}
@@ -82,7 +83,7 @@ const NotFoundPosts = () => {
           </li>
         </ul>
       </div>
-    </section>
+    </Section>
   );
 };
 
