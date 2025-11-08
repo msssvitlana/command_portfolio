@@ -2,10 +2,10 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { urlFor } from '@/sanity/lib/image';
 import { PortableText } from '@portabletext/react';
-import Link from 'next/link';
 import styles from './BlogPostPage.module.css';
 import Section from '@/components/Ui/Section/Section';
 import { getPost } from '@/lib/sanity';
+import PostFooter from '@/components/PostFooter/PostFooter';
 
 type ParamsProps = {
   params: Promise<{ slug: string }>;
@@ -62,18 +62,7 @@ const BlogPostPage = async ({ params }: ParamsProps) => {
             <PortableText value={post.extendedContent} />
           </div>
         )}
-        <footer className={styles.detailsFooter}>
-          <div className={styles.footerContent}>
-            <p className={styles.thankYouText}>Дякуємо, що читаєте наш блог! 💛</p>
-            <p className={styles.footerNavText}>
-              Можете повернутися на{' '}
-              <Link href="/blog" className={styles.detailsLink}>
-                сторінку блогу
-              </Link>{' '}
-              і знайти ще більше цікавого.
-            </p>
-          </div>
-        </footer>
+        <PostFooter />
       </div>
     </Section>
   );
