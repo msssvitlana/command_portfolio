@@ -1,4 +1,4 @@
-.section {
+.sectionContact {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,7 +11,7 @@
   background-color: #0a0f1c;
 }
 
-.section::before {
+.sectionContact::before {
   content: '';
   position: absolute;
   top: -60%;
@@ -27,7 +27,7 @@
   animation: rotateLayer1 8s linear infinite;
 }
 
-.section::after {
+.sectionContact::after {
   content: '';
   position: absolute;
   top: -70%;
@@ -57,7 +57,7 @@
 .form:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
-  background-color: rgba(30, 30, 40, 0.8);
+  background-color: rgba(21, 21, 30, 0.8);
 }
 
 .contactCard {
@@ -262,8 +262,8 @@
   }
 }
 @media screen and (min-width: 768px) {
-  .section {
-    max-width: 1024px;
+  .sectionContact {
+    /* max-width: 1024px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -284,12 +284,12 @@
 }
 
 @media screen and (min-width: 1280px) {
-  .section {
+  .sectionContact {
     max-width: 1600px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 20px 20px;
+    /* padding: 20px 20px; */
     width: 100%;
     gap: 80px;
   }
