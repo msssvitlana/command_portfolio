@@ -1,6 +1,11 @@
-const TextLogo = () => {
+type Props = {
+  width?: number | string;
+  height?: number | string;
+};
+
+const TextLogo = ({ width = 66, height = 7 }: Props) => {
   return (
-    <svg width="66" height="7" viewBox="0 0 383 32">
+    <svg width={width} height={height} viewBox="0 0 383 32">
       <defs>
         <linearGradient id="myTextGradient" x1="0%" y1="0%" x2="100%" y2="0%">
           <stop offset="0%" stopColor="#00ff00" />
