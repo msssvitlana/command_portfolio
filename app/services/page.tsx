@@ -1,7 +1,12 @@
+import ListServices from '@/components/ListServ/ListServices';
 import Section from '@/components/Ui/Section/Section';
 
 const ServicesPage = () => {
-  return <Section>ServicesPage</Section>;
+  return (
+    <Section>
+      <ListServices />
+    </Section>
+  );
 };
 
 export default ServicesPage;

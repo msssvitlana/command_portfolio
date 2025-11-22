@@ -81,7 +81,12 @@ export const navItems: NavItem[] = [
   },
 ];
 
-interface ServiceItem {
+interface Picture {
+  alt: string;
+  src: string;
+}
+
+export interface ServiceItem {
   id: string;
   label: string;
   description: string;
@@ -92,7 +97,7 @@ export interface ServiceBlock {
   title: string;
   subTitle: string;
   items: ServiceItem[];
-  picture?: string;
+  picture?: Picture;
 }
 
 export const services: ServiceBlock[] = [
@@ -134,7 +139,10 @@ export const services: ServiceBlock[] = [
         description: 'Сайт однаково гарно працює на телефоні, планшеті та комп’ютері.',
       },
     ],
-    picture: '/images/service/create.webp',
+    picture: {
+      alt: "На столі два комп'ютера з розробкою на моніторах",
+      src: '/images/service/create.webp',
+    },
   },
   {
     id: 'web-applications',
@@ -168,7 +176,10 @@ export const services: ServiceBlock[] = [
         description: 'Перша версія продукту для тесту ідеї на ринку перед великими інвестиціями.',
       },
     ],
-    picture: '/images/service/user-support.webp',
+    picture: {
+      alt: 'Кілька вебзастосунків з кабінетами користувачів та адмін-панелями',
+      src: '/images/service/user-support.webp',
+    },
   },
   {
     id: 'full-stack-development',
@@ -197,7 +208,10 @@ export const services: ServiceBlock[] = [
         description: 'Сайт завантажується швидко та добре індексується пошуковими системами.',
       },
     ],
-    picture: '/images/service/backend.webp',
+    picture: {
+      alt: 'Серверні шафи в дата-центрі',
+      src: '/images/service/backend.webp',
+    },
   },
   {
     id: 'support-and-maintenance',
@@ -231,7 +245,10 @@ export const services: ServiceBlock[] = [
           'Освіжаємо зовнішній вигляд сайту та покращуємо UX відповідно до сучасних стандартів.',
       },
     ],
-    picture: '/images/service/support.webp',
+    picture: {
+      alt: 'Великий монітор з шестернями, символізує підтримку та розвиток готових проєктів',
+      src: '/images/service/support.webp',
+    },
   },
   {
     id: 'ui-ux-design',
@@ -265,6 +282,9 @@ export const services: ServiceBlock[] = [
         description: 'Оновлюємо застарілі сайти та застосунки, покращуємо читабельність і UX.',
       },
     ],
-    picture: '/images/service/ui-ux_real.webp',
+    picture: {
+      alt: 'Футуристичний UI/UX дизайн з голографічними елементами',
+      src: '/images/service/ui-ux_real.webp',
+    },
   },
 ];
