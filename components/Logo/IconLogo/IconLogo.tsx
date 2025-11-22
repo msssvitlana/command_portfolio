@@ -1,6 +1,11 @@
-const IconLogo = () => {
+type Props = {
+  width?: number | string;
+  height?: number | string;
+};
+
+const IconLogo = ({ width = 28, height = 32 }: Props) => {
   return (
-    <svg width="28" height="32" viewBox="0 0 28 32">
+    <svg width={width} height={height} viewBox="0 0 28 32">
       <defs>
         <linearGradient id="myGradient" x1="0%" y1="0%" x2="100%" y2="0%">
           <stop offset="0%" stopColor="#ff0000" />

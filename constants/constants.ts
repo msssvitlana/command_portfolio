@@ -80,3 +80,191 @@ export const navItems: NavItem[] = [
     href: '/contact',
   },
 ];
+
+interface ServiceItem {
+  id: string;
+  label: string;
+  description: string;
+}
+
+export interface ServiceBlock {
+  id: string;
+  title: string;
+  subTitle: string;
+  items: ServiceItem[];
+  picture?: string;
+}
+
+export const services: ServiceBlock[] = [
+  {
+    id: 'full-site-development',
+    title: 'Створення сайтів під ключ',
+    subTitle:
+      'Ми робимо сайт від ідеї до готового запуску — вам не потрібно нічого додатково шукати.',
+    items: [
+      {
+        id: 'landing-pages',
+        label: 'Лендинги',
+        description: 'Одна сторінка, яка веде користувача до дії: написати, купити, записатися.',
+      },
+      {
+        id: 'corporate-sites',
+        label: 'Сайти компаній',
+        description: 'Повний сайт для вашої компанії з послугами, командою та контактами.',
+      },
+      {
+        id: 'portfolio-sites',
+        label: 'Портфоліо та персональні сайти',
+        description:
+          'Красиво показуємо ваші роботи або бренд, підходить для фрілансерів і спеціалістів.',
+      },
+      {
+        id: 'business-sites',
+        label: 'Сайти для малого та середнього бізнесу',
+        description: 'Допомагають продавати, приймати заявки і будувати довіру.',
+      },
+      {
+        id: 'redesign-new-site',
+        label: 'Редизайн старого сайту',
+        description: 'Оновлюємо вигляд та структуру, робимо сайт сучасним та зручним.',
+      },
+      {
+        id: 'responsive',
+        label: 'Адаптивність',
+        description: 'Сайт однаково гарно працює на телефоні, планшеті та комп’ютері.',
+      },
+    ],
+    picture: '/images/service/create.webp',
+  },
+  {
+    id: 'web-applications',
+    title: 'Вебзастосунки та складні інтерфейси',
+    subTitle:
+      'Коли потрібен не просто сайт, а щось з логікою, кабінетами та інтерактивними елементами.',
+    items: [
+      {
+        id: 'user-dashboard',
+        label: 'Кабінети користувачів',
+        description: 'Особисті сторінки з профілем, налаштуваннями та історією дій.',
+      },
+      {
+        id: 'admin-panels',
+        label: 'Адмін-панелі',
+        description: 'Зручне місце, де ви керуєте контентом та замовленнями.',
+      },
+      {
+        id: 'booking-systems',
+        label: 'Системи бронювання та замовлень',
+        description: 'Онлайн-запис, форми з логікою, оплати та заявки.',
+      },
+      {
+        id: 'interactive-catalogs',
+        label: 'Інтерактивні каталоги',
+        description: 'Фільтри, пошук, сортування та модальні вікна.',
+      },
+      {
+        id: 'mvp-for-startups',
+        label: 'Легкі MVP для стартапів',
+        description: 'Перша версія продукту для тесту ідеї на ринку перед великими інвестиціями.',
+      },
+    ],
+    picture: '/images/service/user-support.webp',
+  },
+  {
+    id: 'full-stack-development',
+    title: 'Full-stack розробка',
+    subTitle:
+      'Ми працюємо і з “картинкою”, і з логікою всередині, щоб створити повноцінний продукт.',
+    items: [
+      {
+        id: 'backend-logic',
+        label: 'Створення бекенд-логіки',
+        description: 'Реєстрації, форми, обробка даних та інтеграція сервісів.',
+      },
+      {
+        id: 'api-integration',
+        label: 'Інтеграції з сервісами',
+        description: 'Підключаємо оплати, мапи, CRM та інші зовнішні сервіси.',
+      },
+      {
+        id: 'deployment',
+        label: 'Розгортання проєкту',
+        description: 'Налаштовуємо хостинг, домен і робимо сайт стабільно онлайн.',
+      },
+      {
+        id: 'optimization-seo',
+        label: 'Оптимізація швидкості та SEO',
+        description: 'Сайт завантажується швидко та добре індексується пошуковими системами.',
+      },
+    ],
+    picture: '/images/service/backend.webp',
+  },
+  {
+    id: 'support-and-maintenance',
+    title: 'Підтримка та розвиток готових проєктів',
+    subTitle: 'Якщо сайт уже є — ми допомагаємо зробити його ще кращим.',
+    items: [
+      {
+        id: 'add-new-features',
+        label: 'Додаємо нові розділи та функції',
+        description: 'Створюємо нові сторінки, блоки або можливості відповідно до потреб бізнесу.',
+      },
+      {
+        id: 'bug-fixes',
+        label: 'Виправляємо помилки',
+        description: 'Усі технічні проблеми та некоректна робота елементів усуваються.',
+      },
+      {
+        id: 'speed-optimization',
+        label: 'Оптимізація швидкості',
+        description: 'Стиснення ресурсів, покращення часу завантаження та роботи сайту.',
+      },
+      {
+        id: 'migration',
+        label: 'Переносимо сайт з іншої платформи',
+        description: 'Акуратно переносимо контент, зберігаємо структуру та швидкість.',
+      },
+      {
+        id: 'redesign-existing-site',
+        label: 'Оновлення дизайну та структури',
+        description:
+          'Освіжаємо зовнішній вигляд сайту та покращуємо UX відповідно до сучасних стандартів.',
+      },
+    ],
+    picture: '/images/service/support.webp',
+  },
+  {
+    id: 'ui-ux-design',
+    title: 'UI/UX Дизайн',
+    subTitle: 'Дизайн, який не просто красивий — він зручний і працює на ваш бізнес.',
+    items: [
+      {
+        id: 'landing-design',
+        label: 'Дизайн лендингів',
+        description: 'Стильні односторінкові сайти, що ведуть користувача до конкретної дії.',
+      },
+      {
+        id: 'prototyping',
+        label: 'Прототипування',
+        description: 'Перед дизайном робимо макети, щоб показати логіку сайту і блоки сторінок.',
+      },
+      {
+        id: 'ui-systems',
+        label: 'UI-системи',
+        description:
+          'Створюємо базову систему кнопок, кольорів і стилів для єдиного вигляду продукту.',
+      },
+      {
+        id: 'web-app-design',
+        label: 'Дизайн вебзастосунків',
+        description: 'Інтерфейси для кабінетів, панелей керування та онлайн-інструментів.',
+      },
+      {
+        id: 'interface-redesign',
+        label: 'Редизайн інтерфейсів',
+        description: 'Оновлюємо застарілі сайти та застосунки, покращуємо читабельність і UX.',
+      },
+    ],
+    picture: '/images/service/ui-ux_real.webp',
+  },
+];
