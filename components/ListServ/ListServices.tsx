@@ -5,15 +5,23 @@ import ServiceItems from '../ServiceItems/ServiceItems';
 
 const ListServices = () => {
   return (
-    <ul>
+    <ul className={styles.servicesList}>
       {services.map(service => (
-        <li key={service.id}>
+        <li className={styles.serviceCard} key={service.id}>
           {service.picture && (
-            <Image width={240} height={240} alt={service.picture?.alt} src={service.picture.src} />
+            <div className={styles.serviceImgWrap}>
+              <Image
+                width={240}
+                height={240}
+                alt={service.picture?.alt}
+                src={service.picture.src}
+                className={styles.serviceImg}
+              />
+            </div>
           )}
-          <div>
-            <h2>{service.title}</h2>
-            <h3>{service.subTitle}</h3>
+          <div className={styles.serviceInfo}>
+            <h2 className={styles.serviceTitle}>{service.title}</h2>
+            <h3 className={styles.serviceSubtitle}>{service.subTitle}</h3>
           </div>
           <ServiceItems items={service.items} />
         </li>
