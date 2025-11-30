@@ -29,7 +29,7 @@
     0 0 5px #7ea9ff,
     0 0 10px #5b7eff,
     0 0 15px #3f5bff;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   margin-bottom: 56px;
   animation: glow 2s ease-in-out infinite alternate;
 }

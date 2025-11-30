@@ -10,7 +10,7 @@
   justify-content: center;
 }
 .formTitle {
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.2;

@@ -9,39 +9,12 @@
   overflow: hidden;
   z-index: 0;
   background-color: #0a0f1c;
+  background-image: url('/images/bg_blog_3.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
-.sectionContact::before {
-  content: '';
-  position: absolute;
-  top: -60%;
-  left: -60%;
-  width: 220%;
-  height: 220%;
-  border-radius: 50%;
-  background: conic-gradient(from 0deg, #3b82f6, #f43f5e, #facc15, #10b981, #3b82f6);
-  opacity: 0.25;
-  filter: blur(80px);
-  pointer-events: none;
-  z-index: 0;
-  animation: rotateLayer1 8s linear infinite;
-}
-
-.sectionContact::after {
-  content: '';
-  position: absolute;
-  top: -70%;
-  left: -70%;
-  width: 240%;
-  height: 240%;
-  border-radius: 50%;
-  background: conic-gradient(from 180deg, #60a5fa, #3b82f6, #22c55e, #f97316, #60a5fa);
-  opacity: 0.18;
-  filter: blur(100px);
-  pointer-events: none;
-  z-index: 0;
-  animation: rotateLayer2 15s linear infinite reverse;
-}
 .form {
   width: 100%;
   background-color: rgba(14, 14, 21, 0.65);
@@ -56,7 +29,7 @@
 
 .form:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 6px 24px rgba(23, 41, 206, 0.4);
   background-color: rgba(21, 21, 30, 0.8);
 }
 
@@ -122,8 +95,8 @@
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 12px;
-  color: var(--accent-color-light);
-  text-shadow: 0 0 10px rgba(37, 99, 235, 0.5);
+  color: #5970b6;
+  /* text-shadow: 0 0 10px rgba(37, 99, 235, 0.5); */
   position: relative;
   z-index: 1;
 }
