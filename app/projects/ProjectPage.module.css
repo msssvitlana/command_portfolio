@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
   background-image: url('/images/bg_blog_2.jpg');
   background-repeat: no-repeat;
   background-position: center center;
