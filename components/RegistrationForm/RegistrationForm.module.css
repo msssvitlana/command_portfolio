@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 40px 10px;
+  padding: 40px 20px;
 }
 
 .wrapper {
@@ -12,7 +12,7 @@
 .formTitle {
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
   font-weight: 700;
-  font-size: 36px;
+  font-size: 30px;
   line-height: 1.2;
   letter-spacing: 0.01em;
   text-align: center;
@@ -196,7 +196,9 @@
     height: 50px;
     min-width: 480px;
   }
-
+  .formTitle {
+    font-size: 36px;
+  }
   .subtitle {
     font-size: 18px;
     font-weight: 400;
