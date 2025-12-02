@@ -4,3 +4,45 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.intro {
+  text-align: center;
+  margin-bottom: 24px;
+  color: var(--text-primary);
+}
+
+.intro h1 {
+  font-size: 28px;
+  margin-bottom: 12px;
+  text-shadow: var(--text-shadow-accent);
+}
+
+.intro p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+@media screen and (min-width: 768px) {
+  .intro {
+    margin-bottom: 32px;
+  }
+
+  .intro h1 {
+    font-size: 36px;
+    margin-bottom: 16px;
+  }
+
+  .intro p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .intro {
+    margin-bottom: 40px;
+  }
+
+  .intro h1 {
+    margin-bottom: 20;
+  }
+}

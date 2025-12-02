@@ -3,7 +3,7 @@ import Link from 'next/link';
 import styles from './NavList.module.css';
 import { useState } from 'react';
 import { navItems } from '@/constants/constants';
-import RegistrationForm from '@/components/RegistrationForm/RegistrationForm';
+import RegistrationForm from '@/components/Forms/RegistrationForm/RegistrationForm';
 import ModalDefault from '@/components/Modal/ModalDefault/ModalDefault';
 type Props = {
   onClose?: () => void;
