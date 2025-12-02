@@ -2,21 +2,21 @@
 
 import { useState } from 'react';
 import styles from './page.module.css';
-import RegistrationForm from '@/components/RegistrationForm/RegistrationForm';
+import RegistrationForm from '@/components/Forms/RegistrationForm/RegistrationForm';
 import ModalDefault from '@/components/Modal/ModalDefault/ModalDefault';
 import Section from '@/components/Ui/Section/Section';
-import Loader from '@/components/Loader/Loader'; // 👈 вставили лоадер
+import Loader from '@/components/Ui/Loader/Loader';
 
 const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false); // 👈 состояние загрузки
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleOpenModal = () => {
-    setIsLoading(true); // показать лоадер
+    setIsLoading(true);
     setTimeout(() => {
-      setIsLoading(false); // спрятать лоадер
-      setIsModalOpen(true); // открыть модалку
-    }, 5000); // имитация загрузки
+      setIsLoading(false);
+      setIsModalOpen(true);
+    }, 5000);
   };
 
   const handleCloseModal = () => setIsModalOpen(false);

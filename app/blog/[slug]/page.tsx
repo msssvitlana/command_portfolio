@@ -5,7 +5,7 @@ import { PortableText } from '@portabletext/react';
 import styles from './BlogPostPage.module.css';
 import Section from '@/components/Ui/Section/Section';
 import { getPost } from '@/lib/sanity';
-import PostFooter from '@/components/PostFooter/PostFooter';
+import PostFooter from '@/components/Layout/PostFooter/PostFooter';
 
 type ParamsProps = {
   params: Promise<{ slug: string }>;

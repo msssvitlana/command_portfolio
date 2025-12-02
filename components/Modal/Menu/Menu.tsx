@@ -1,5 +1,5 @@
-import Logo from '../Logo/Logo';
-import NavList from '../NavList/NavList';
+import Logo from '../../Logo/Logo';
+import NavList from '../../Layout/NavList/NavList';
 import styles from './Menu.module.css';
 
 type Props = {

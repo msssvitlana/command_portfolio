@@ -1,10 +1,10 @@
-import TeamList from '@/components/TeamList/TeamList';
 import styles from './page.module.css';
 import '../globals.css';
-import AboutInfoBlock from '@/components/AboutInfoBlock/AboutInfoBlock';
+import AboutInfoBlock from '@/components/About/AboutInfoBlock/AboutInfoBlock';
 import Button from '@/components/Ui/Button/Button';
 import Link from 'next/link';
 import Section from '@/components/Ui/Section/Section';
+import TeamList from '@/components/About/TeamList/TeamList';
 const About = () => {
   return (
     <Section className={styles.sectionAbout}>

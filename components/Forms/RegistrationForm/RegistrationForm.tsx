@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { toast, ToastContainer } from 'react-toastify';
 import { Formik, Form, Field, FieldProps } from 'formik';
 import * as Yup from 'yup';
-import Loader from '../Loader/Loader';
+import Loader from '../../Ui/Loader/Loader';
 
 type RegistrationFormProps = {
   /** Текст заголовка (опціонально) */

@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import 'modern-normalize';
-import TanStackProvider from '@/components/TanStackProvider/TanStackProvider';
-import Header from '../components/Header/Header';
+import TanStackProvider from '@/components/Layout/TanStackProvider/TanStackProvider';
+import Header from '../components/Layout/Header/Header';
 import './palette.css';
 import './shadow-palette.css';
 

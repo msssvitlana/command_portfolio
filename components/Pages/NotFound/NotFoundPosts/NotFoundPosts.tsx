@@ -1,6 +1,6 @@
 'use client';
 
-import Icon from '@/components/Icon/Icon';
+import Icon from '@/components/Ui/Icon/Icon';
 import { getGreeting } from '@/utils/blog';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';

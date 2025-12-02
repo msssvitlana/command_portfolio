@@ -1,11 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import Logo from '../Logo/Logo';
+import Logo from '../../Logo/Logo';
 import NavList from '../NavList/NavList';
 import styles from './Header.module.css';
-import ModalDefault from '../Modal/ModalDefault/ModalDefault';
-import Menu from '../Menu/Menu';
+import ModalDefault from '../../Modal/ModalDefault/ModalDefault';
+import Menu from '../../Modal/Menu/Menu';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);

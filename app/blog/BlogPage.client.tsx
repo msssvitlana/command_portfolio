@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { urlFor } from '@/sanity/lib/image';
-import NotFoundPosts from '@/components/NotFound/NotFoundPosts/NotFoundPosts';
+import NotFoundPosts from '@/components/Pages/NotFound/NotFoundPosts/NotFoundPosts';
 import { formatDate } from '@/utils/date';
 import styles from './BlogPage.module.css';
 import Section from '@/components/Ui/Section/Section';
