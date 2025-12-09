@@ -1,6 +1,5 @@
-import type { NextConfig } from 'next';
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   images: {
     remotePatterns: [
       {
@@ -10,14 +9,18 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'cdn.sanity.io',
-        port: '',
         pathname: '/images/**',
       },
     ],
   },
+
+  turbopack: {
+    enabled: false,
+  },
+
   experimental: {
     webpackBuildWorker: false,
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
