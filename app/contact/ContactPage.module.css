@@ -6,23 +6,30 @@
   position: relative;
   overflow: hidden;
   z-index: 0;
-  background-color: #0a0f1c;
+  background-color: #cdced1;
   background-image: url('/images/bg_blog_3.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
 }
 
 .form {
   width: 100%;
-  background-color: rgba(14, 14, 21, 0.65);
-  border-radius: 16px;
   box-shadow: var(--shadow-elevated);
+
+  color: var(--foreground);
+  border-radius: 80px;
+  border: 1px solid var(--btn-accent-light);
+  background-color: var(--btn-bg-dark);
+
   backdrop-filter: blur(8px);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    background-color 0.3s ease;
+  -webkit-backdrop-filter: blur(8px);
+
+  /* box-shadow: var(--shadow-light); */
+  transition: all 0.3s ease;
 }
 
 .form:hover {
@@ -49,6 +56,36 @@
 
 .contactCard:hover {
   background-color: rgba(30, 30, 40, 0.8);
+}
+.contactCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  text-align: center;
+  padding: 22px 20px;
+  width: 100%;
+
+  /* ЧИСТОЕ ПРОЗРАЧНОЕ СТЕКЛО */
+  background: radial-gradient(circle at top left, rgba(12, 14, 22, 0.95), rgba(37, 37, 55, 0.98));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 16px;
+
+  /* тонкая стеклянная рамка */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  /* лёгкая тень для читаемости */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+
+  transition: transform 0.25s ease;
+}
+
+.contactCard:hover {
+  background: rgba(255, 255, 255, 0.1); /* чуть ярче, но всё ещё прозрачное */
+  transform: translateY(-3px);
 }
 
 .infoTable {
@@ -94,7 +131,6 @@
   font-weight: 700;
   margin-bottom: 12px;
   color: #5970b6;
-  /* text-shadow: 0 0 10px rgba(37, 99, 235, 0.5); */
   position: relative;
   z-index: 1;
 }
@@ -233,11 +269,13 @@
 }
 @media screen and (min-width: 768px) {
   .sectionContact {
-    /* max-width: 1024px; */
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px 20px;
+    padding: 24px 32px;
+    max-width: 1024px;
+    height: 100vh;
   }
   .form {
     padding: 20px;

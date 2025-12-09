@@ -4,7 +4,7 @@ const Loader = () => {
   return (
     <div className={styles.loaderWrapper}>
       <div className={styles.loaderBox}>
-        {/* SVG ноутбук з екраном */}
+        {/* 
         <svg
           className={styles.laptop}
           width="100"
@@ -12,7 +12,7 @@ const Loader = () => {
           viewBox="0 0 100 70"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-        ></svg>
+        ></svg> */}
 
         <p className={styles.text}>
           Зачекайте, будь ласка…

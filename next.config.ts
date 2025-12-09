@@ -15,6 +15,9 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  experimental: {
+    webpackBuildWorker: false,
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;

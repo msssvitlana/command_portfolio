@@ -159,9 +159,3 @@
     font-size: 18px;
   }
 }
-@media screen and (min-width: 1280px) {
-  .main {
-    padding: 60px 60px;
-    max-width: 100%;
-  }
-}
