@@ -14,13 +14,9 @@ const nextConfig = {
     ],
   },
 
-  turbopack: {
-    enabled: false,
-  },
-
   experimental: {
     webpackBuildWorker: false,
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
